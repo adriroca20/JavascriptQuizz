@@ -5,15 +5,18 @@ import { QuestionsSelector } from "./QuestionsSelector";
 export const Start = ()=>{
     const questionsAmmount = useQuestionsStore(state => state.questionsAmmount)
     const getQuestions = useQuestionsStore(state => state.getQuestions)
+    const setUserName = useQuestionsStore(state => state.setUserName)
     const handleClick = ()=>{
         getQuestions(questionsAmmount)
     }
-
+    const handleUserName = (event:any)=>{
+        setUserName(event.target.value)
+    }
     return <>
-        <Stack direction={"column"} gap={2} alignItems="center" justifyContent="center">
-        <TextField id="outlined-basic" label="Introduce tu nombre!" variant="outlined" />
+        <Stack direction={"column"} gap={4} alignItems="center" justifyContent="center" width={"100%"}>
+        <TextField id="outlined-basic" onChange={handleUserName} label="Introduce tu nombre!" variant="outlined" fullWidth/>
         <QuestionsSelector></QuestionsSelector>
-        <Button onClick={()=> {handleClick()}} variant="contained" disabled={questionsAmmount == 0}>
+        <Button onClick={()=> {handleClick()}} variant="contained" color="secondary" disabled={questionsAmmount == 0} fullWidth>
             ¡Empezar!
         </Button>
         </Stack>

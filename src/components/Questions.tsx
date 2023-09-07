@@ -23,7 +23,7 @@ export const Question = ({info} : {info: QuestionType}) =>{
         return "transparent"
     }
     return (<>
-        <Card variant="outlined" sx={{textAlign:'left',padding:'15px', bgcolor:'#222'}}>
+        <Card variant="outlined" sx={{textAlign:'left',padding:'15px', bgcolor:'#222', height:"400px"}}>
             <Typography variant="h5">
                 {info.question}
             </Typography>
