@@ -2,6 +2,7 @@ import { useQuestionsStore } from "../store/questions"
 
 export const useQuestionsData = ()=>{
     const questions = useQuestionsStore(state => state.questions)
+    const totalQuestions = questions.length
     let correct = 0
     let incorrect = 0
     let unanswered = 0
@@ -11,5 +12,5 @@ export const useQuestionsData = ()=>{
         else if(correctAnswer == userSelectedAnswer) correct ++
         else incorrect ++
     })
-    return {correct,incorrect,unanswered}
+    return {correct,incorrect,unanswered,totalQuestions}
 }

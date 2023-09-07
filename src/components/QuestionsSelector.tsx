@@ -3,11 +3,9 @@ import { useQuestionsStore } from "../store/questions"
 
 export const QuestionsSelector = () => {
   const setQuestionsAmmount = useQuestionsStore(state => state.setQuestionsAmount)
-  const questionsAmmount: number = useQuestionsStore(state => state.questionsAmmount)
 
 
   const handleChange = (event: any, ammount: any) => {
-    console.log(ammount)
     setQuestionsAmmount(ammount)
   }
   return <>
