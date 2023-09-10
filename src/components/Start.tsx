@@ -16,7 +16,7 @@ export const Start = ()=>{
         <Stack direction={"column"} gap={4} alignItems="center" justifyContent="center" width={"100%"}>
         <TextField id="outlined-basic" onChange={handleUserName} label="Introduce tu nombre!" variant="outlined" fullWidth/>
         <QuestionsSelector></QuestionsSelector>
-        <Button onClick={()=> {handleClick()}} variant="contained" color="secondary" disabled={questionsAmmount == 0} fullWidth>
+        <Button onClick={()=> {handleClick()}} variant="contained" sx={{backgroundColor:"rgb(250,202,21)"}} disabled={questionsAmmount == 0} fullWidth>
             ¡Empezar!
         </Button>
         </Stack>

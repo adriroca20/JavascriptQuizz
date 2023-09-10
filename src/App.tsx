@@ -14,7 +14,10 @@ function App() {
       <main className="main-page">
         <div className="container">
         <Stack
-            direction="row"
+            sx={{
+              marginBottom:"20px"
+            }}
+            direction="column"
             gap={2}
             alignItems="center"
             justifyContent="center"

@@ -1,14 +1,40 @@
 .result-container{
     text-align: center;
     padding: 0;
-    background-color: #222;
     height: 450px;
     width: 600px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    z-index: 10;
+    border: 1px solid rgb(250,202,21);
+    overflow: hidden;
 }
-.grade-mark{
-
+.background{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    top: 0;
+    background-color: rgba(141,127,0,.5);
+    background-image: radial-gradient(rgba(250,202,21,1) 0.75px, rgba(0, 0, 0, 1) 0.75px);
+    background-size: 15px 15px; 
+    opacity: 0.3;
+}
+.background> svg{
+    position: absolute;
+    right: 0px;
+    bottom: -20px;
+    transform: rotate(-10deg);
+    height: 250px;
+    width: 250px;
+}
+.congrats-text{
+    text-wrap: balance;
+}
+.username{
+    color: rgb(250,202,21);
 }

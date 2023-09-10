@@ -3,7 +3,6 @@ import { useQuestionsStore } from "../store/questions"
 import { Question } from "../components/Questions"
 import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material"
 import { Footer } from "../components/Footer"
-import { useEffect } from "react"
 
 
 
@@ -15,7 +14,8 @@ export const Game = ()=>{
     const questionInfo = questions[currentQuestion]
     return (
         <>
-        <Stack direction="row" gap={2} alignItems="center">
+            <Question info={questionInfo}></Question>
+            <Stack direction="row" gap={2} alignItems="center">
             <IconButton onClick={goPreviousQuestion} disabled = {currentQuestion == 0}>
                 <ArrowBackIosNew></ArrowBackIosNew>
             </IconButton>
@@ -24,7 +24,6 @@ export const Game = ()=>{
                 <ArrowForwardIos></ArrowForwardIos>
             </IconButton>
         </Stack>
-            <Question info={questionInfo}></Question>
             <Footer></Footer>
         </>
     )

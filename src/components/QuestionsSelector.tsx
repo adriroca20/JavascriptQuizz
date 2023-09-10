@@ -1,5 +1,6 @@
 import { Button, Slider, Stack, ToggleButton, ToggleButtonGroup, Typography } from "@mui/material"
 import { useQuestionsStore } from "../store/questions"
+import { CustomSlider } from "./CustomSlider"
 
 export const QuestionsSelector = () => {
   const setQuestionsAmmount = useQuestionsStore(state => state.setQuestionsAmount)
@@ -13,7 +14,7 @@ export const QuestionsSelector = () => {
     <Typography>
         ¿Con cuantas preguntas te atreves?
       </Typography>
-      <Slider
+      <CustomSlider
         aria-label="Temperature"
         defaultValue={10}
         step={5}
