@@ -29,7 +29,7 @@ export const useQuestionsStore = create<State>()(
         userName:"",
         endQuiz:false,
         getQuestions: async (limit: number) => {
-          const res = await fetch("http://localhost:5173/data.json");
+          const res = await fetch("https://sj2v7wmw-5173.uks1.devtunnels.ms/data.json");
           const json = await res.json();
           const questions = json
             .sort(() => Math.random() - 0.5)

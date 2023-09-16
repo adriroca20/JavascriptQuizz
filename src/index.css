@@ -29,3 +29,16 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+@media (max-width:550px) {
+    .questions-container{
+      width: 90vw;
+    }
+    .main-page{
+      height: fit-content;
+      padding: 30px 0;
+    }
+    .result-container{
+      width: 90vw;
+    }
+}

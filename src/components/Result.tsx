@@ -15,26 +15,13 @@ export const Result = () => {
     const imageRef = useRef(null);
     
     async function compartir(){
-        console.log(imageRef.current)
-        const newFile = await toBlob(imageRef.current);
-        const data = {
-          files: [
-            new File([newFile], 'image.png', {
-              type: newFile.type,
-            }),
-          ],
-          title: 'Image',
-          text: 'image',
-        };
-    
-        try {
-            if (!navigator.canShare(data)) {
-              console.error("Can't share");
-            }
-            await navigator.share(data);
-          } catch (err) {
-            console.error(err);
-          }
+        const newFile = await toBlob(imageRef.current!);
+        var csvURL = window.URL.createObjectURL(newFile!);
+        const tempLink = document.createElement('a');
+        tempLink.href = csvURL;
+        tempLink.setAttribute('download', 'resultado-quiz.png');
+        tempLink.click();
+
     }
     return (
         <>
@@ -53,7 +40,7 @@ export const Result = () => {
                         {grade}
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
-                        Comparte tus resultados
+                        Gracias por participar
                     </Typography>
                     </Stack>
                 </CardContent>

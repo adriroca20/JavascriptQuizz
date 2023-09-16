@@ -21,9 +21,10 @@ function App() {
             gap={2}
             alignItems="center"
             justifyContent="center"
+            className="title-container"
           >
             <JavaScriptLogo></JavaScriptLogo>
-            <Typography variant="h2" component="h1">
+            <Typography variant="h2" component="h1" className="page-tittle" textAlign={"center"}>
               JavaScript Quiz
             </Typography>
           </Stack>

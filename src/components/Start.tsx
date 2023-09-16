@@ -13,7 +13,7 @@ export const Start = ()=>{
         setUserName(event.target.value)
     }
     return <>
-        <Stack direction={"column"} gap={4} alignItems="center" justifyContent="center" width={"100%"}>
+        <Stack direction={"column"} gap={4} alignItems="center" justifyContent="center" width={"100%"} padding={"20px"}>
         <TextField id="outlined-basic" onChange={handleUserName} label="Introduce tu nombre!" variant="outlined" fullWidth/>
         <QuestionsSelector></QuestionsSelector>
         <Button onClick={()=> {handleClick()}} variant="contained" sx={{backgroundColor:"rgb(250,202,21)"}} disabled={questionsAmmount == 0} fullWidth>
